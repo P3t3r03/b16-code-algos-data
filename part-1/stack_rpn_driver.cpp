@@ -6,17 +6,18 @@
 int main(int argc, char **argv)
 {
     // Basic interface
-    auto stack = Stack<int>(100);
+    auto stack = StackRpn<int>(100);
     stack.push(2);
     stack.push(2);
     stack.push(3);
     plus(stack);
     multiplies(stack);
-    std::cout << "2 2 2 + * = " << stack.top() << '\n';
+    std::cout << "2 2 3 + * = " << stack.top() << '\n';
 
     // Advanced interface (optional)
+    /*
     stack << 2 << 2 << 3 << plus << multiplies;
     std::cout << "2 2 2 + * = " << stack.top() << '\n';
-
+    */
     return 0;
 }

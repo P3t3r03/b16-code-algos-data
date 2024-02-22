@@ -19,8 +19,7 @@ template <typename T> struct Node {
 template <typename T>
 Node<T> *list_insert_after(Node<T> *node, const T &value)
 {
-    node->next =
-        std::make_unique<Node<T>>(value, std::move(node->next));
+    node->next = std::make_unique<Node<T>>(value, std::move(node->next));
     return node->next.get();
 }
 
