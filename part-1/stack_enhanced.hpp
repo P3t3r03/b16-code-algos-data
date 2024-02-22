@@ -9,6 +9,7 @@ template <typename T> class StackEnhanced : public Stack<T>
     // Inherit the Stack<T> constructors as they are
     // https://en.cppreference.com/w/cpp/language/using_declaration
     using Stack<T>::Stack;
+    
 
     void clear()
     {
