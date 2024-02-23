@@ -5,8 +5,11 @@
 
 template <class T, typename V> T bst_search(const T &tree, const V &v)
 {
-    if (!tree || v == value(tree)) return tree;
-    if (v < value(tree)) return bst_search(left(tree), v);
+    if (!tree || v == value(tree))
+        return tree;
+    if (v < value(tree))
+        return bst_search(left(tree), v);
+
     auto other = bst_search(right(tree), v);
     return other ? other : tree;
 }
