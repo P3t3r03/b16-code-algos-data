@@ -1,0 +1,10 @@
+If all of the keys are depended on the Mod method if we choose mod = 1 then all of the positive integers would have 0 remainder
+and be put into the same chain. This would result in all of the keys being in the same chain. This would result in a worst case
+complexity of retrieving a key to be O(n) as we would effectively be searching an unsorted array.
+
+If we convert the image to binary and then pass this through a well designed hashing function we will get a hash that we can
+attach to the image. If we changed even a tiny part of the image it would result in a completely different hash function. Therefore
+as long as we compare the hash value of the new image to the true hash value we will know whether or not it has been modified. The 
+value for m that we choose reduces the chance of collisions which would render this check ineffective but we also need to worry about
+space of the hash space but this isn't very high. Storing an image is already a lot of memory so using a 256 space for the hash would
+be sufficient.
